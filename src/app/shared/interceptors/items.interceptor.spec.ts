@@ -3,8 +3,8 @@ import { TestBed } from '@angular/core/testing';
 
 import { environment } from 'src/environments/environment';
 import { Items } from '../interfaces/items';
-
 import { ItemsInterceptor } from './items.interceptor';
+import expectedItemsResponse from '../../../assets/mock-items.json'
 
 describe('ItemsInterceptor', () => {
 
@@ -33,8 +33,20 @@ describe('ItemsInterceptor', () => {
   it('should get an ItemsResponse Object', (done: DoneFn) => {
     http.get<Items>(url).subscribe({
       next: (itemsResponse: Items) => {
+        expect(interceptor.buildItems(itemsResponse))
+          .withContext('expected Items Response')
+          .toEqual(expectedItemsResponse);
+        done();
+      },
+      error: done.fail
+    });
+  });
+
+  it('should get only 5 items', (done: DoneFn) => {
+    http.get<Items>(url).subscribe({
+      next: (itemsResponse: Items) => {
         expect(interceptor.buildItems(itemsResponse).items.length)
-          .withContext('expected Items Lenght')
+          .withContext('expected 5 Items lenght')
           .toEqual(5);
         done();
       },

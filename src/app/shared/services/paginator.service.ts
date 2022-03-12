@@ -62,7 +62,7 @@ export class PaginatorService {
         size: this.pageSize,
         total: totalPages,
         start: startPage,
-        end: endPage,
+        end: endPage
       },
       totalItems: totalItems,
       index: {
