@@ -1,1 +1,6 @@
-<p>home works!</p>
+<app-items-list [itemList]="itemsResponse ? itemsResponse.items : []" ></app-items-list>
+<app-paginator
+    [length]="itemsResponse ? itemsResponse.pagination.page.total : 0"
+    [selected]="itemsResponse ? itemsResponse.pagination.page.current : 0"
+    (paginate)="paginate($event)">
+</app-paginator>

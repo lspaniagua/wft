@@ -33,7 +33,6 @@ export class ItemsInterceptor implements HttpInterceptor {
     const length = items?.length;
     const pagination = this.paginatorService.paginate(length ? length : 0);
     const { index: { start, end } } = pagination;
-    console.log(items, pagination);
     return { items: length ? items?.slice(start, end + 1) : [], pagination };
   }
 }

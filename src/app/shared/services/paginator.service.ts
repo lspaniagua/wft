@@ -80,4 +80,8 @@ export class PaginatorService {
   previousPage(): void {
     this.currentPage--;
   }
+
+  goToPage(page: number): void {
+    this.currentPage = page;
+  }
 }

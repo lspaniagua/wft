@@ -1,0 +1,33 @@
+<div class="item-container">
+    <div class="item-img">
+        <img [src]="item.image">
+    </div>
+    <div class="item-detail">
+        <div class="item-header">
+            <span class="price">{{ item.price | currency:'EUR':'symbol'}}</span>
+            <div class="cursor-pointer ">
+                <ng-container *ngIf="favorite; then favIcon; else noFavIcon">
+                </ng-container>
+                <ng-template #favIcon>
+                    <span class="material-icons" (click)="favEvent(item)">
+                        favorite
+                    </span>
+                </ng-template>
+                <ng-template #noFavIcon>
+                    <span class="material-icons" (click)="favEvent(item)">
+                        favorite_border
+                    </span>
+                </ng-template>
+
+            </div>
+
+        </div>
+        <div class="item-body">
+            <span class="title">{{ item.title }}</span>
+            <span class="description">{{ item.description }}</span>
+        </div>
+        <div class="item-footer">
+            {{ item.email }}
+        </div>
+    </div>
+</div>

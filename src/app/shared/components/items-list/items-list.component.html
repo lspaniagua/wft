@@ -1,0 +1,10 @@
+<ng-container *ngIf="fullItem; then viewFull; else viewSmall">
+</ng-container>
+<ng-template #viewFull>
+    <div class="item" *ngFor="let i of itemList">
+        <app-item-large [item]="i" [favorite]="false" (clickEvent)="eventFav($event)"></app-item-large>
+    </div>
+</ng-template>
+<ng-template #viewSmall>
+
+</ng-template>
