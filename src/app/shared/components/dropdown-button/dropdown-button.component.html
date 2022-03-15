@@ -1,0 +1,38 @@
+<button type="button" (click)="open()" class="dropbtn button-secondary">
+    <span class="dropbtn material-icons">
+        unfold_more
+    </span>
+    <span class="dropbtn">Ordenar por</span>
+</button>
+<div id="myDropdown" class="dropdown-content">
+  <a (click)="event('title')">
+    <span class="material-icons">
+      abc
+    </span>
+    <span class="dropbtn">Por título</span>
+  </a>
+  <a (click)="event('price', 'asc')">
+    <span class="material-icons">
+      arrow_upward
+    </span>
+    <span class="dropbtn">De menor a mayor precio</span>
+  </a>
+  <a (click)="event('price', 'desc')">
+    <span class="material-icons">
+      arrow_downward
+    </span>
+    <span class="dropbtn">De mayor a menor precio</span>
+  </a>
+  <a (click)="event('description')">
+    <span class="material-icons">
+      abc
+    </span>
+    <span class="dropbtn">Por descripción</span>
+  </a>
+  <a (click)="event('email')">
+    <span class="material-icons">
+      abc
+    </span>
+    <span class="dropbtn">Por correo</span>
+  </a>
+</div>

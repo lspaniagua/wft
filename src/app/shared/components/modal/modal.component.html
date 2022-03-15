@@ -1,0 +1,14 @@
+<div class="modal">
+    <div class="body">
+        <div class="div-title">
+            <span class="title">{{title}}</span>
+            <span class="material-icons" title="Cerrar" (click)="close()">
+                close
+            </span>
+        </div>
+        <div class="div-content">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>
+<div class="modal-background"></div>

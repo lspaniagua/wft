@@ -1,0 +1,28 @@
+<div class="container-filter">
+    <form [formGroup]="filterForm" (ngSubmit)="filter()">
+        <div class="field" *ngFor="let filterInput of filterInputs">
+            <label for="{{filterInput.name}}">{{filterInput.description}}:</label>
+            <input id="{{filterInput.name}}" type="text" formControlName="{{filterInput.name}}">
+        </div>
+        <div class="container-buttons">
+            <button type="button" type="submit">
+                <span class="material-icons">
+                    search
+                </span>
+                <span>Aplicar</span>
+            </button>
+            <button type="button" class="button-secondary" (click)="clean()">
+                <span class="material-icons">
+                    cleaning_services
+                </span>
+                <span>Limpiar</span>
+            </button>
+            <button *ngIf="close.observers.length" type="button" class="button-secondary" (click)="hide()">
+                <span class="material-icons">
+                    clear
+                </span>
+                <span>Cancelar</span>
+            </button>
+        </div>
+    </form>
+</div>

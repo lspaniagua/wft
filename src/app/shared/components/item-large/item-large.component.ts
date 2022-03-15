@@ -22,6 +22,7 @@ export class ItemLargeComponent implements OnInit {
   }
 
   favEvent(item: Item): void {
+    this.favorite = !this.favorite;
     this.clickEvent.emit(item);
   }
 

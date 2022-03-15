@@ -10,10 +10,69 @@ body {
 }
 
 .material-icons {
-    font-size: 30px;
-    color: #13c1ac;
+  font-size: 30px;
+  color: #13c1ac;
 }
 
 .cursor-pointer {
-    cursor: pointer;
+  cursor: pointer;
 }
+
+button {
+  color: white;
+  background: #13c1ac;
+  font-size: 14px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  border-radius: 15px;
+  padding: 5px;
+  border: 0px;
+  cursor: pointer;
+  display: flex;
+  padding: 5px 10px;
+
+  .material-icons {
+    font-size: 14px;
+    color: white;
+  }
+
+  span {
+    padding: 5px;
+  }
+}
+
+button:hover {
+  background: #0f9787;
+}
+
+button:active {
+  background: #0f9787;
+}
+
+.button-secondary {
+  color: #13c1ac;
+  background-color: #FFFFFF;
+  border: 1px solid #13c1ac;
+
+  .material-icons {
+    font-size: 14px;
+    color: #13c1ac;
+  }
+}
+
+.button-secondary:hover {
+  background-color: #e7e7e7;
+}
+
+.button-secondary:active {
+  background-color: #e7e7e7;
+}
+
+.container-buttons {
+  display: flex;
+  
+  button {
+    margin-left: 5px;
+  }
+}
+

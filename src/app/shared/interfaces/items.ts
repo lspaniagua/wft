@@ -6,6 +6,7 @@ export interface Item {
     price: string;
     email: string;
     image: string;
+    favorite?: boolean;
 }
 
 export interface Items {
@@ -16,3 +17,5 @@ export interface ItemsResponse {
     items: Item[];
     pagination: Paginator;
 }
+
+export type ItemAttributes = 'title' | 'description' | 'price' | 'email';

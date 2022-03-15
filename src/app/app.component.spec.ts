@@ -26,10 +26,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('wft');
   });
 
-  it('should render title', () => {
+  it('should render Welcome', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('wft app is running!');
+    expect(compiled.querySelector('.container .header .header-container h2')?.textContent).toContain('Bienvenido');
   });
 });

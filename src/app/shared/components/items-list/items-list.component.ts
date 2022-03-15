@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Item, ItemsResponse } from '../../interfaces/items';
+
+import { Item } from '../../interfaces/items';
+import { FavoriteItemsService } from '../../services/favorite-items.service';
 
 @Component({
   selector: 'app-items-list',
@@ -7,19 +9,17 @@ import { Item, ItemsResponse } from '../../interfaces/items';
   styleUrls: ['./items-list.component.scss']
 })
 export class ItemsListComponent implements OnInit {
-  @Input() fullItem: boolean;
+  @Input() isViewLarge: boolean = true;
   @Input() itemList: Item[];
 
-  constructor() {
-    this.fullItem = true;
+  constructor(private favoriteItemsService: FavoriteItemsService) {
     this.itemList = [];
   }
 
   ngOnInit(): void {
   }
 
-  eventFav(item: Item): void {
-    console.log('item seleccionado', item);
+  toggleFavorites(item: Item): void {
+    this.favoriteItemsService.toggle(item);
   }
-
 }

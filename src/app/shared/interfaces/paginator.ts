@@ -1,6 +1,5 @@
 export interface Paginator {
     page: Page;
-    pages: number[];
     totalItems: number;
     index: Index;
 }

@@ -1,0 +1,54 @@
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: auto;
+
+    .body {
+       /* padding: 0 20px 20px 20px; */
+        background: #ECEFF1;
+        margin: 40px auto;
+        width: 70%;
+        border-radius: 10px;
+
+        .div-title {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: white;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+
+            .title {
+                font-size: 25px;
+                font-weight: 500;
+            }
+
+            .material-icons {
+                cursor: pointer;
+            }
+        }
+
+        .div-content {
+            padding: 20px;
+        }
+    }
+}
+
+.modal-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.75;
+    z-index: 900;
+}
+
+body.modal-open {
+    overflow: hidden;
+}

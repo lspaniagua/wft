@@ -1,0 +1,37 @@
+.container-filter {
+    background: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    
+    form {
+        padding: 20px;
+
+        input {
+            padding: 8px;
+            border: 1px solid #808080;
+            border-radius: 10px;
+
+        }
+    }
+
+    .field {
+        display: flex;
+        width: 98%;
+        margin: 2%;
+
+        label {
+            flex-grow: 1;
+            width: 25%; 
+            align-self: center;
+        }
+
+        input {
+            flex-grow: 3;
+            width: 75%;
+        }
+    }
+
+    .container-buttons {
+        justify-content: flex-end;
+    }
+}

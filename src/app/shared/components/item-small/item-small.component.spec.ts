@@ -1,23 +1,23 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ItemLargeComponent } from './item-large.component';
+import { ItemSmallComponent } from './item-small.component';
 import itemsResponse from '../../../../assets/mock-items.json'
 import { Item } from '../../interfaces/items';
 
-describe('ItemLargeComponent', () => {
-  let component: ItemLargeComponent;
-  let fixture: ComponentFixture<ItemLargeComponent>;
+describe('ItemSmallComponent', () => {
+  let component: ItemSmallComponent;
+  let fixture: ComponentFixture<ItemSmallComponent>;
   let item: Item;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ItemLargeComponent ]
+      declarations: [ ItemSmallComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ItemLargeComponent);
+    fixture = TestBed.createComponent(ItemSmallComponent);
     item = itemsResponse.items[0]
     component = fixture.componentInstance;
     component.item = item;

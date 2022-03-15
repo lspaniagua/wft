@@ -1,6 +1,33 @@
+<app-filter-view *ngIf="showFilter"
+    [filterInputs]="filterInputs"
+    (getItems)="getFilteredItems($event)"
+    (close)="closeFilters()"></app-filter-view>
+
+<div class="container-buttons">
+    <button type="button" (click)="openModal()">
+        <span class="material-icons">favorite</span>
+        <span>Ver mis favoritos</span>
+    </button>
+
+    <button type="button" (click)="openFilter()">
+        <span class="material-icons">search</span>
+        <span>Filtar</span>
+    </button>
+
+    <app-dropdown-button (clickEvent)="setSort($event)"></app-dropdown-button>
+</div>
+
 <app-items-list [itemList]="itemsResponse ? itemsResponse.items : []" ></app-items-list>
 <app-paginator
     [length]="itemsResponse ? itemsResponse.pagination.page.total : 0"
     [selected]="itemsResponse ? itemsResponse.pagination.page.current : 0"
     (paginate)="paginate($event)">
 </app-paginator>
+
+
+<app-modal #favModal [title]="'Lista de favoritos'" (onClose)="getItems()">
+    <app-filter-view 
+        [filterInputs]="filterFavoriteInputs"
+        (getItems)="setFavoriteItemsFilter($event)"></app-filter-view>
+    <app-items-list [itemList]="favoriteItems | filterByAttribute : favoriteItemsFilter" [isViewLarge]="false" ></app-items-list>
+</app-modal>

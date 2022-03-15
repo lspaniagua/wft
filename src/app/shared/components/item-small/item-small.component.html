@@ -1,0 +1,13 @@
+<div class="item-container">
+    <div class="item-img">
+        <img [src]="item.image">
+    </div>
+    <div class="item-detail">
+        <span class="title">{{ item.title }}</span>
+        <div class="cursor-pointer ">
+            <span class="material-icons" title="Eliminar de favoritos" (click)="deleteEvent(item)">
+                delete_outline
+            </span>
+        </div>
+    </div>
+</div>
