@@ -36,6 +36,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     private filterService: FilterService
   ) {
     this.showFilter = false;
+    this.favoriteItems = [];
     this.filterInputs = [
       { name: 'title', description: 'Titulo', value:'' },
       { name: 'description', description: 'Descripción', value:'' },
@@ -43,13 +44,13 @@ export class HomeComponent implements OnInit, OnDestroy {
       { name: 'email', description: 'Correo', value:'' }
     ];
     this.filterFavoriteInputs = [
-      { name: 'title', description: 'Titulo', value:'' }
+      { name: 'title', description: 'Titulo', value: '' }
     ];
   }
 
   ngOnInit(): void {
     this.subscription = this.favoriteItemsService.getItems().subscribe((response: Item[]) => {
-      this.favoriteItems = response;
+      this.favoriteItems = [...response];
     });
     this.getItems();
   }

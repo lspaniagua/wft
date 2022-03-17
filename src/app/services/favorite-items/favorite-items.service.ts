@@ -18,14 +18,12 @@ export class FavoriteItemsService {
 
   toggle(item: Item): void {
     const index = this.items.findIndex((i) => i === item);
-
     if (index === -1) {
       this.items.push(item);
-      this.subject.next(this.items);
     } else {
       this.items.splice(index, 1);
-      this.subject.next(this.items);
     }
+    this.subject.next(this.items);
   }
 
   getItems(): Observable<Item[]> {
