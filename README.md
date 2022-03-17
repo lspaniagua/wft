@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Download and run
 
 ```bash
-git clone git@github.com:lspaniagua/wft.git
+git clone https://github.com/lspaniagua/wft.git
 cd wft
 npm install
 npm start
