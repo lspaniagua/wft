@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { Filter } from '../interfaces/filter';
-import { Item, ItemAttributes } from '../interfaces/items';
+import { Filter } from '../../interfaces/filter';
+import { Item, ItemAttributes } from '../../interfaces/items';
 
 @Injectable({
   providedIn: 'root'

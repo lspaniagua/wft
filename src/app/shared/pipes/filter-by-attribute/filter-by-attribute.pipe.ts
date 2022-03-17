@@ -1,13 +1,14 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Filter } from '../interfaces/filter';
-import { Item } from '../interfaces/items';
+
+import { Filter } from '../../../interfaces/filter';
+import { Item } from '../../../interfaces/items';
 
 @Pipe({
   name: 'filterByAttribute'
 })
 export class FilterByAttributePipe implements PipeTransform {
 
-  transform(items: Item[], filter: Filter): Item[] {
+  transform(items: Item[], filter?: Filter): Item[] {
     if (!filter) {
       return items;
     }

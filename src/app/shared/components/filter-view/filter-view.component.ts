@@ -1,8 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
-import { ItemAttributes } from '../../interfaces/items'
-import { Filter, FilterInput } from '../../interfaces/filter';
+import { ItemAttributes } from '../../../interfaces/items'
+import { Filter, FilterInput } from '../../../interfaces/filter';
 
 @Component({
   selector: 'app-filter-view',

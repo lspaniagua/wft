@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
-import { Item } from '../../interfaces/items';
+import { Item } from '../../../interfaces/items';
 
 @Component({
   selector: 'app-item-small',

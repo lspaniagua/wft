@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { SortService } from './sort.service';
 import itemsResponse from '../../../assets/mock-items.json'
-import { Item } from '../interfaces/items';
+import { Item } from '../../interfaces/items';
 
 describe('SortService', () => {
   let service: SortService;

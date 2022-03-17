@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
-import { FilterInput } from '../../interfaces/filter';
+import { FilterInput } from '../../../interfaces/filter';
 import { SharedModule } from '../../shared.module';
 
 import { FilterViewComponent } from './filter-view.component';

@@ -36,3 +36,11 @@
 .show {
   display: block;
 }
+
+@media (min-width: 300px) and (max-width: 560px) {
+
+  .show {
+    right: 25px;
+  }
+  
+}

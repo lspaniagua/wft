@@ -1,6 +1,6 @@
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ItemsInterceptor } from 'src/app/shared/interceptors/items.interceptor';
+import { ItemsInterceptor } from 'src/app/interceptors/items/items.interceptor';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 import { HomeComponent } from './home.component';
@@ -33,5 +33,12 @@ describe('HomeComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should render Welcome', () => {
+    const fixture = TestBed.createComponent(HomeComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('.container .header .header-container h2')?.textContent).toContain('Bienvenido');
   });
 });

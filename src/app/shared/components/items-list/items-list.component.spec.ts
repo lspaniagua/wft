@@ -2,8 +2,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ItemsListComponent } from './items-list.component';
 import itemsResponse from '../../../../assets/mock-items.json'
-import { Item } from '../../interfaces/items';
-import { IsFavoritePipe } from '../../pipes/is-favorite.pipe';
+import { Item } from '../../../interfaces/items';
+import { IsFavoritePipe } from '../../pipes/is-favorite/is-favorite.pipe';
 
 describe('ItemsListComponent', () => {
   let component: ItemsListComponent;

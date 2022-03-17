@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { Item, ItemAttributes } from '../interfaces/items';
-import { Sort, SortType } from '../interfaces/sort';
+import { Item, ItemAttributes } from '../../interfaces/items';
+import { Sort, SortType } from '../../interfaces/sort';
 
 @Injectable({
   providedIn: 'root'

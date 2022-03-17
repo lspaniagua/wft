@@ -1,17 +1,20 @@
+@use './styles/colors';
+
 @import "https://fonts.googleapis.com/css?family=Material+Icons";
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
+
 
 html,
 body {
   height: auto;
-  background: white;
+  background: colors.$content-white;
   margin: 0;
   font-family: Roboto;
 }
 
 .material-icons {
   font-size: 30px;
-  color: #13c1ac;
+  color: colors.$primary;
 }
 
 .cursor-pointer {
@@ -19,13 +22,12 @@ body {
 }
 
 button {
-  color: white;
-  background: #13c1ac;
+  color: colors.$content-white;
+  background: colors.$primary;
   font-size: 14px;
   font-family: 'Roboto';
   font-weight: 500;
   border-radius: 15px;
-  padding: 5px;
   border: 0px;
   cursor: pointer;
   display: flex;
@@ -33,7 +35,7 @@ button {
 
   .material-icons {
     font-size: 14px;
-    color: white;
+    color: colors.$content-white;
   }
 
   span {
@@ -42,37 +44,53 @@ button {
 }
 
 button:hover {
-  background: #0f9787;
+  background: colors.$dark-primary;
 }
 
 button:active {
-  background: #0f9787;
+  background: colors.$dark-primary;
 }
 
 .button-secondary {
-  color: #13c1ac;
-  background-color: #FFFFFF;
-  border: 1px solid #13c1ac;
+  color: colors.$primary;
+  background-color: colors.$content-white;
+  border: 1px solid colors.$primary;
 
   .material-icons {
     font-size: 14px;
-    color: #13c1ac;
+    color: colors.$primary;
   }
 }
 
 .button-secondary:hover {
-  background-color: #e7e7e7;
+  background-color: colors.$dark-secondary;
 }
 
 .button-secondary:active {
-  background-color: #e7e7e7;
+  background-color: colors.$dark-secondary;
 }
 
 .container-buttons {
   display: flex;
+  justify-content: end;
   
   button {
     margin-left: 5px;
   }
+}
+
+
+@media (min-width: 200px) and (max-width: 560px) {
+
+  .container-buttons {
+    display: block;
+    align-self: end;
+    
+    button {
+      margin-left: auto;
+      margin-top: 5px;
+    }
+  }
+  
 }
 

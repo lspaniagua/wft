@@ -1,14 +1,15 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
+
 import { ModalComponent } from 'src/app/shared/components/modal/modal.component';
-import { Filter, FilterInput } from 'src/app/shared/interfaces/filter';
-import { Item, ItemsResponse } from 'src/app/shared/interfaces/items';
-import { Sort } from 'src/app/shared/interfaces/sort';
-import { FavoriteItemsService } from 'src/app/shared/services/favorite-items.service';
-import { FilterService } from 'src/app/shared/services/filter.service';
-import { ItemsService } from 'src/app/shared/services/items.service';
-import { PaginatorService } from 'src/app/shared/services/paginator.service';
-import { SortService } from 'src/app/shared/services/sort.service';
+import { Filter, FilterInput } from 'src/app/interfaces/filter';
+import { Item, ItemsResponse } from 'src/app/interfaces/items';
+import { Sort } from 'src/app/interfaces/sort';
+import { FavoriteItemsService } from 'src/app/services/favorite-items/favorite-items.service';
+import { FilterService } from 'src/app/services/filter/filter.service';
+import { ItemsService } from 'src/app/services/items/items.service';
+import { PaginatorService } from 'src/app/services/paginator/paginator.service';
+import { SortService } from 'src/app/services/sort/sort.service';
 
 @Component({
   selector: 'app-home',
@@ -20,7 +21,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   public itemsResponse: ItemsResponse;
   public favoriteItems: Item[];
-  public favoriteItemsFilter: Filter;
+  public favoriteItemsFilter?: Filter;
   public showFilter: boolean;
   public filterInputs: FilterInput[];
   public filterFavoriteInputs: FilterInput[];
@@ -107,8 +108,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   setFavoriteItemsFilter(filters: Filter[]) {
-    if (filters.length > 0) {
-      this.favoriteItemsFilter = filters[0];
-    }
+    this.favoriteItemsFilter = filters[0];
   }
 }

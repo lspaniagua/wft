@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ItemsInterceptor } from './shared/interceptors/items.interceptor';
+import { ItemsInterceptor } from './interceptors/items/items.interceptor';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({

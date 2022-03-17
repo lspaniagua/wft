@@ -1,6 +1,5 @@
 import { FilterByAttributePipe } from './filter-by-attribute.pipe';
-
-import itemsResponse from '../../../assets/mock-items.json'
+import itemsResponse from '../../../../assets/mock-items.json'
 
 describe('FilterByAttributePipe', () => {
   let pipe: FilterByAttributePipe;

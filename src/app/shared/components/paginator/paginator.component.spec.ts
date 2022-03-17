@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { NumberToArrayPipe } from '../../pipes/number-to-array.pipe';
+import { NumberToArrayPipe } from '../../pipes/number-to-array/number-to-array.pipe';
 
 import { PaginatorComponent } from './paginator.component';
 

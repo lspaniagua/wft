@@ -1,7 +1,7 @@
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
 
-import { ItemsInterceptor } from '../interceptors/items.interceptor';
+import { ItemsInterceptor } from '../../interceptors/items/items.interceptor';
 import { ItemsService } from './items.service';
 import expectedItemsResponse from '../../../assets/mock-items.json'
 

@@ -1,8 +1,8 @@
 import { Component, ElementRef, EventEmitter, OnInit, Output } from '@angular/core';
 
-import { ItemAttributes } from '../../interfaces/items';
-import { Sort, SortType } from '../../interfaces/sort';
-import { PaginatorService } from '../../services/paginator.service';
+import { ItemAttributes } from '../../../interfaces/items';
+import { Sort, SortType } from '../../../interfaces/sort';
+import { PaginatorService } from '../../../services/paginator/paginator.service';
 
 @Component({
   selector: 'app-dropdown-button',

@@ -1,5 +1,7 @@
+@use '../../../../styles/colors';
+
 .container-filter {
-    background: #ffffff;
+    background: colors.$content-white;
     border-radius: 10px;
     margin-bottom: 20px;
     
@@ -8,7 +10,7 @@
 
         input {
             padding: 8px;
-            border: 1px solid #808080;
+            border: 1px solid colors.$dark-gray;
             border-radius: 10px;
 
         }
@@ -35,3 +37,24 @@
         justify-content: flex-end;
     }
 }
+
+@media (min-width: 300px) and (max-width: 560px) {
+
+    .container-filter {
+        .field {
+            width: 100%;
+            margin: 10px 0px;
+            flex-direction: column;
+    
+            label {
+                width: 90%;
+                margin: auto;
+            }
+    
+            input {
+                width: 90%;
+                margin: 5px 0px;
+            }
+        }
+    }
+  }

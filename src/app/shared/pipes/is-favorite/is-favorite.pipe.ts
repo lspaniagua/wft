@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-import { Item } from '../interfaces/items';
-import { FavoriteItemsService } from '../services/favorite-items.service';
+import { Item } from '../../../interfaces/items';
+import { FavoriteItemsService } from '../../../services/favorite-items/favorite-items.service';
 
 @Pipe({
   name: 'isFavorite'

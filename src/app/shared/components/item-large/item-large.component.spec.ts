@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ItemLargeComponent } from './item-large.component';
 import itemsResponse from '../../../../assets/mock-items.json'
-import { Item } from '../../interfaces/items';
+import { Item } from '../../../interfaces/items';
 
 describe('ItemLargeComponent', () => {
   let component: ItemLargeComponent;

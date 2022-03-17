@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ItemSmallComponent } from './item-small.component';
 import itemsResponse from '../../../../assets/mock-items.json'
-import { Item } from '../../interfaces/items';
+import { Item } from '../../../interfaces/items';
 
 describe('ItemSmallComponent', () => {
   let component: ItemSmallComponent;

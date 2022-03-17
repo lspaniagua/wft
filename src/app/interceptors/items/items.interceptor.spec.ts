@@ -2,7 +2,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
 
 import { environment } from 'src/environments/environment';
-import { Items } from '../interfaces/items';
+import { Items } from '../../interfaces/items';
 import { ItemsInterceptor } from './items.interceptor';
 import expectedItemsResponse from '../../../assets/mock-items.json'
 

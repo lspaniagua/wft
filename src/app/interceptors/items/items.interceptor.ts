@@ -8,10 +8,10 @@ import {
 } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
 
-import { Items, ItemsResponse } from '../interfaces/items';
-import { PaginatorService } from '../services/paginator.service';
-import { SortService } from '../services/sort.service';
-import { FilterService } from '../services/filter.service';
+import { Items, ItemsResponse } from '../../interfaces/items';
+import { PaginatorService } from '../../services/paginator/paginator.service';
+import { SortService } from '../../services/sort/sort.service';
+import { FilterService } from '../../services/filter/filter.service';
 
 @Injectable()
 export class ItemsInterceptor implements HttpInterceptor {

@@ -1,7 +1,7 @@
-import { FavoriteItemsService } from '../services/favorite-items.service';
+import { FavoriteItemsService } from '../../../services/favorite-items/favorite-items.service';
 import { IsFavoritePipe } from './is-favorite.pipe';
-import itemsResponse from '../../../assets/mock-items.json'
-import { Item } from '../interfaces/items';
+import itemsResponse from '../../../../assets/mock-items.json'
+import { Item } from '../../../interfaces/items';
 
 describe('IsFavoritePipe', () => {
   let service: FavoriteItemsService;
